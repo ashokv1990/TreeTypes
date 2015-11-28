@@ -182,7 +182,7 @@ void RedBlackTree::Insert(int data)
     return;
 }
 
-void RedBlackTree::deleteFix(RedBlackTreeNode *x)
+void RedBlackTree::deleteFix(RedBlackTreeNode *x) //THIS CODE CAN HAVE A NIL COMING INTO IT, BUT THIS NIL SHOULD HAVE AN ARBITRARY AND CORRECT PARENT FROM DELETE PROCEDURE
 {
     RedBlackTreeNode* rleft = dynamic_cast<RedBlackTreeNode*>(root->getleft());
     while(x->getcolor() == 0 && x != rleft)
@@ -195,13 +195,13 @@ void RedBlackTree::deleteFix(RedBlackTreeNode *x)
             {
                 w->setcolor(0);
                 dynamic_cast<RedBlackTreeNode*>(w->getparent())->setcolor(1);
-                leftrotate(x->getparent());
-                w = dynamic_cast<RedBlackTreeNode*>(x->getparent()->getright());
+                leftrotate(x->getparent());//CRITICAL :ROTATE CANNOT CHANGE OUR SINGLE SENTINAL NIL,S PARENT AS IT IS USED IN DELETEFIX
+                w = dynamic_cast<RedBlackTreeNode*>(x->getparent()->getright());//EX: USING X->GETPARENT AFTER ROTATION SO NIL,S PARENT CANNOT CHANGE
                 
             }
             RedBlackTreeNode* wl = dynamic_cast<RedBlackTreeNode*>(w->getleft());
             RedBlackTreeNode* wr = dynamic_cast<RedBlackTreeNode*>(w->getright());
-            if(wl->getcolor() == 0 && wr->getcolor() == 0)
+            if(wl->getcolor() == 0 && wr->getcolor() == 0) //CHECK CAREFULLY NEW UNCLE CANNOT BE A NIL NODE, REVISE ALL PROPERTIES OF RED BLACK TREE
             {
                 w->setcolor(1);
                 x = dynamic_cast<RedBlackTreeNode*>(x->getparent());
@@ -266,9 +266,9 @@ void RedBlackTree::deleteFix(RedBlackTreeNode *x)
 AbstractTreeNode* RedBlackTree::leftrotate(AbstractTreeNode *r1)
 {
     AbstractTreeNode* r = r1->getright();
-    r1->setright(r->getleft());
+    AbstractTreeNode* leftchildofright = r->getleft();
+    r1->setright(leftchildofright);
     AbstractTreeNode * p = r1->getparent();
-    if(r != getNullNode()) //after deletefix call Nil,s parent must not change MIT
     r->setparent(p);
     if( p != getNullNode())
     {
@@ -283,16 +283,21 @@ AbstractTreeNode* RedBlackTree::leftrotate(AbstractTreeNode *r1)
     }
     r1->setparent(r);
     r->setleft(r1);
+    
+    if(leftchildofright != nil)
+    {
+        leftchildofright->setparent(r1);
+    }
     return r;
 }
 
 AbstractTreeNode* RedBlackTree::rightrotate(AbstractTreeNode *r1)
 {
     AbstractTreeNode* r = r1->getleft();
-    r1->setleft(r->getright());
+    AbstractTreeNode* rightchildofleft = r->getright();
+    r1->setleft(rightchildofleft);
     AbstractTreeNode * p = r1->getparent();
-    if(r != getNullNode())
-    r->setparent(p); //after deletefix call Nil,s parent must not change MIT
+    r->setparent(p);
     if( p != getNullNode())
     {
         if(p->getleft() == r1)
@@ -306,6 +311,11 @@ AbstractTreeNode* RedBlackTree::rightrotate(AbstractTreeNode *r1)
     }
     r1->setparent(r);
     r->setright(r1);
+    
+    if(rightchildofleft != nil)
+    {
+        rightchildofleft->setparent(r1);
+    }
     return r;
     
 }
@@ -330,7 +340,7 @@ bool RedBlackTree::deleteNode(int node)
     }
     RedBlackTreeNode *x = z->getleft() == getNullNode()? dynamic_cast<RedBlackTreeNode*>(z->getright()): dynamic_cast<RedBlackTreeNode*>(z->getleft());
 
-    x->setparent(z->getparent());
+    x->setparent(z->getparent()); //X COULD BE NIL , NIL,S PARENT IS NOW A NON NIL NODE
     if(x->getparent() == root)
     {
         root->setleft(x);

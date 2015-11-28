@@ -99,7 +99,8 @@ void AbstractTree::inOrder()
 AbstractTreeNode* AbstractTree::leftrotate(AbstractTreeNode * root)
 {
     AbstractTreeNode* r = root->getright();
-    root->setright(r->getleft());
+    AbstractTreeNode* left = r->getleft();
+    root->setright(left);
     AbstractTreeNode * p = root->getparent();
     r->setparent(p);
     if( p != getNullNode())
@@ -115,6 +116,11 @@ AbstractTreeNode* AbstractTree::leftrotate(AbstractTreeNode * root)
     }
     root->setparent(r);
     r->setleft(root);
+    
+    if(left != getNullNode())
+    {
+        left->setparent(root);
+    }
     return r;
     
 }
@@ -122,7 +128,8 @@ AbstractTreeNode* AbstractTree::leftrotate(AbstractTreeNode * root)
 AbstractTreeNode* AbstractTree::rightrotate(AbstractTreeNode * root)
 {
     AbstractTreeNode* r = root->getleft();
-    root->setleft(r->getright());
+    AbstractTreeNode* right = r->getright();
+    root->setleft(right);
     AbstractTreeNode * p = root->getparent();
     r->setparent(p);
     if( p != getNullNode())
@@ -138,6 +145,11 @@ AbstractTreeNode* AbstractTree::rightrotate(AbstractTreeNode * root)
     }
     root->setparent(r);
     r->setright(root);
+    
+    if(right != getNullNode())
+    {
+        right->setparent(root);
+    }
     return r;
 }
 

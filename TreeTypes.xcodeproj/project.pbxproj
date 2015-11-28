@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FF1662AD1C07F5C300A342F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662AC1C07F5C300A342F2 /* main.cpp */; };
-		FF1662B81C07F81600A342F2 /* AbstractTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662B71C07F81600A342F2 /* AbstractTree.cpp */; };
 		FF1662BB1C07FC2F00A342F2 /* AVLTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662B91C07FC2F00A342F2 /* AVLTree.cpp */; };
 		FF1662BE1C08DA9200A342F2 /* RedBlackTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662BC1C08DA9200A342F2 /* RedBlackTree.cpp */; };
+		FF1662C01C0A212A00A342F2 /* AbstractTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662BF1C0A212A00A342F2 /* AbstractTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,11 +29,11 @@
 		FF1662A91C07F5C300A342F2 /* TreeTypes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TreeTypes; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF1662AC1C07F5C300A342F2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FF1662B31C07F5F700A342F2 /* AbstractTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractTree.h; sourceTree = "<group>"; };
-		FF1662B71C07F81600A342F2 /* AbstractTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AbstractTree.cpp; path = ../AbstractTree.cpp; sourceTree = "<group>"; };
 		FF1662B91C07FC2F00A342F2 /* AVLTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AVLTree.cpp; sourceTree = "<group>"; };
 		FF1662BA1C07FC2F00A342F2 /* AVLTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AVLTree.hpp; sourceTree = "<group>"; };
 		FF1662BC1C08DA9200A342F2 /* RedBlackTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RedBlackTree.cpp; sourceTree = "<group>"; };
 		FF1662BD1C08DA9200A342F2 /* RedBlackTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RedBlackTree.hpp; sourceTree = "<group>"; };
+		FF1662BF1C0A212A00A342F2 /* AbstractTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractTree.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		FF1662AB1C07F5C300A342F2 /* TreeTypes */ = {
 			isa = PBXGroup;
 			children = (
-				FF1662B71C07F81600A342F2 /* AbstractTree.cpp */,
+				FF1662BF1C0A212A00A342F2 /* AbstractTree.cpp */,
 				FF1662AC1C07F5C300A342F2 /* main.cpp */,
 				FF1662B31C07F5F700A342F2 /* AbstractTree.h */,
 				FF1662B91C07FC2F00A342F2 /* AVLTree.cpp */,
@@ -136,7 +136,7 @@
 				FF1662BB1C07FC2F00A342F2 /* AVLTree.cpp in Sources */,
 				FF1662BE1C08DA9200A342F2 /* RedBlackTree.cpp in Sources */,
 				FF1662AD1C07F5C300A342F2 /* main.cpp in Sources */,
-				FF1662B81C07F81600A342F2 /* AbstractTree.cpp in Sources */,
+				FF1662C01C0A212A00A342F2 /* AbstractTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
