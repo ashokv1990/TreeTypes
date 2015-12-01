@@ -9,7 +9,7 @@
 #include <iostream>
 #include "AVLTree.hpp"
 #include "RedBlackTree.hpp"
-
+#include "Trie.hpp"
 void print(AbstractTree * t , int level)
 {
     if(level > 0)
@@ -67,4 +67,19 @@ int main(int argc, const char * argv[]) {
     print(r , 2);
     r->deleteNode(5);
     print(r , 2);
+    std:: cout << "TRIE" << std::endl;
+    Trie * d = new Trie();
+    d->insert("ashok" , 1);
+    
+    d->insert("ashwin" , 2);
+    d->insert("kesh" , 3);
+    d->insert("keshav" , 4);
+    d->print();
+    d->remove("ashwin");
+    std::cout << "####" <<std::endl;
+    d->print();
+    std::cout << d->searchval("kesh") ;
+    d->remove("kesh");
+    d->print();
+     std::cout << d->searchval("keshav") ;
 }

@@ -11,6 +11,7 @@
 		FF1662BB1C07FC2F00A342F2 /* AVLTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662B91C07FC2F00A342F2 /* AVLTree.cpp */; };
 		FF1662BE1C08DA9200A342F2 /* RedBlackTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662BC1C08DA9200A342F2 /* RedBlackTree.cpp */; };
 		FF1662C01C0A212A00A342F2 /* AbstractTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662BF1C0A212A00A342F2 /* AbstractTree.cpp */; };
+		FF1662D91C0B343900A342F2 /* Trie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF1662D71C0B343900A342F2 /* Trie.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		FF1662BC1C08DA9200A342F2 /* RedBlackTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RedBlackTree.cpp; sourceTree = "<group>"; };
 		FF1662BD1C08DA9200A342F2 /* RedBlackTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RedBlackTree.hpp; sourceTree = "<group>"; };
 		FF1662BF1C0A212A00A342F2 /* AbstractTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AbstractTree.cpp; sourceTree = "<group>"; };
+		FF1662D71C0B343900A342F2 /* Trie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trie.cpp; sourceTree = "<group>"; };
+		FF1662D81C0B343900A342F2 /* Trie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trie.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				FF1662BA1C07FC2F00A342F2 /* AVLTree.hpp */,
 				FF1662BC1C08DA9200A342F2 /* RedBlackTree.cpp */,
 				FF1662BD1C08DA9200A342F2 /* RedBlackTree.hpp */,
+				FF1662D71C0B343900A342F2 /* Trie.cpp */,
+				FF1662D81C0B343900A342F2 /* Trie.hpp */,
 			);
 			path = TreeTypes;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				FF1662BE1C08DA9200A342F2 /* RedBlackTree.cpp in Sources */,
 				FF1662AD1C07F5C300A342F2 /* main.cpp in Sources */,
 				FF1662C01C0A212A00A342F2 /* AbstractTree.cpp in Sources */,
+				FF1662D91C0B343900A342F2 /* Trie.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
