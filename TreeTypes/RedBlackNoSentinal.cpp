@@ -336,7 +336,7 @@ void RedBlackTreeNoSentinal::deleteFixNull(RedBlackTreeNode *parent , int dir)
         x->setcolor(0);
 }
 
-void RedBlackTreeNoSentinal::deleteFix(RedBlackTreeNode *x)
+void RedBlackTreeNoSentinal::deleteFix(RedBlackTreeNode *x) //UNCLE CANNOT BE NULL BUT UNCLE,S CHILDREN NO GUARENTEES IF UNCLE IS NULL BLACK HT VIOLATION
 {
     while(x->getcolor() == 0 && x != root)
     {
