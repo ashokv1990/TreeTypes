@@ -10,6 +10,8 @@
 #include "AVLTree.hpp"
 #include "RedBlackTree.hpp"
 #include "Trie.hpp"
+#include "RedBlackNoSentinal.hpp"
+
 void print(AbstractTree * t , int level)
 {
     if(level > 0)
@@ -82,4 +84,22 @@ int main(int argc, const char * argv[]) {
     d->remove("kesh");
     d->print();
      std::cout << d->searchval("keshav") ;
+      std::cout << "RBTREE2" << std::endl;
+     AbstractTree* r2 = new RedBlackTreeNoSentinal();
+    r2->Insert(6);
+    r2->Insert(2);
+    r2->Insert(1);
+    std::cout << "RBTREE2" << std::endl;
+    r2->Insert(4);
+    r2->Insert(5);
+    print(r2 , 2);
+    //r2->deleteNode(6);
+    //print(r2 , 2);
+    r2->deleteNode(4);
+    r2->Insert(12);
+    r2->Insert(13);
+    print(r2 , 2);
+    r2->deleteNode(5);
+    r2->deleteNode(1);
+    print(r2 , 2);
 }

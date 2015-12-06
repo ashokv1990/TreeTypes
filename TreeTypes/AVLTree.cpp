@@ -129,6 +129,7 @@ void AVLTree::insertHelper(AVLTreeNode * &node , int data)
         insertHelper( right, data);
         node->setright(right);
         right->setparent(node);
+        
     }
     else
     {
