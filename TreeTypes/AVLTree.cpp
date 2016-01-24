@@ -258,7 +258,7 @@ AVLTreeNode* AVLTree::deleteHelper(AVLTreeNode * r , int data)
         }
         r = dynamic_cast<AVLTreeNode*>(leftrotate(r));
     }
-    return r;
+    return r ;
 }
 
 bool AVLTree::deleteNode(int node)
