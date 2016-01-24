@@ -23,7 +23,6 @@ public:
     virtual void setparent(AbstractTreeNode*) = 0;
     virtual void PrintContents() = 0;
     virtual int getInsertedData() = 0;
-    
 };
 
 class AbstractTree
