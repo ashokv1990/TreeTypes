@@ -80,6 +80,5 @@ private:
     void updateheight(AbstractTreeNode *r);
     AVLTreeNode* root;
     
-    
 };
 #endif 
