@@ -22,6 +22,7 @@ public:
         right = NULL;
         parent = NULL;
         color = 1; //1 red 0 black
+        
     }
     
     ~RedBlackTreeNode(){
