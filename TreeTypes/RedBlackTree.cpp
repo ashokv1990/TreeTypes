@@ -396,7 +396,7 @@ bool RedBlackTree::deleteNode(int node)
         }
         delete z;
     }
-    return true;
+    return true ;
 }
 
 AbstractTreeNode* RedBlackTree::getNullNode()
